@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}{{ pharmacy.name }} | عن الصيدلية{% endblock %}
+
+{% block content %}
+
+<section class="about-hero container">
+  <div>
+    <span class="eyebrow">قصتنا</span>
+    <h1>حكاية صيدلية بدأت بحلم بسيط</h1>
+    <p>من سنة {{ pharmacy.founded }}، بدأ {{ pharmacy.doctor }} مشواره في خدمة أهالي المنطقة، بفكرة إن الصيدلية مش بس مكان لصرف الدواء، لكنها محطة أمان لكل بيت.</p>
+    <p>النهارده {{ pharmacy.name }} بقت اسم موثوق، وده بفضل الاهتمام بالتفاصيل، الصدق في التعامل، ومتابعة كل حالة لحد ما تطمن.</p>
+
+    <ul class="timeline">
+      <li><b>{{ pharmacy.founded }}</b>افتتاح {{ pharmacy.name }} كصيدلية صغيرة في قلب الحي.</li>
+      <li><b>بعد 3 سنين</b>توسعة الصيدلية وإضافة قسم خاص بمنتجات العناية والتجميل.</li>
+      <li><b>بعدها</b>إطلاق خدمة التوصيل للمنزل لتسهيل الوصول لكبار السن.</li>
+      <li><b>النهارده</b>{{ pharmacy.name }} من أكثر الصيدليات ثقة في المنطقة، بمتابعة شخصية من {{ pharmacy.doctor }}.</li>
+    </ul>
+  </div>
+
+  <div class="hero-card">
+    <div class="doc-photo">م.ح</div>
+    <h3>{{ pharmacy.doctor }}</h3>
+    <span class="role">صيدلي مسؤول ومؤسس {{ pharmacy.name }}</span>
+    <p style="margin-bottom: 16px;">"هدفي إن كل حد يدخل الصيدلية يحس إنه اتسمع، مش بس اتصرفله دواء."</p>
+    <ul>
+      <li>🎓 بكالوريوس الصيدلة، خبرة عملية طويلة في المجال الدوائي</li>
+      <li>🩺 متابعة دورية لحالات الضغط والسكري المزمنة</li>
+      <li>📚 تحديث مستمر بأحدث الأدوية والبروتوكولات العلاجية</li>
+      <li>❤️ التزام بالصدق والشفافية في كل استشارة</li>
+    </ul>
+  </div>
+</section>
+
+<svg class="pulse-divider" viewBox="0 0 1200 70" preserveAspectRatio="none">
+  <path class="pulse-line" d="M0 35 L280 35 L310 10 L340 60 L370 35 L420 35 L450 20 L480 50 L510 35 L1200 35"/>
+</svg>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">قيمنا</span>
+      <h2>إحنا ليه مختلفين</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6.5-8 11-8 11z"/></svg>
+        </div>
+        <h3>اهتمام حقيقي</h3>
+        <p>كل عميل عندنا حالة خاصة، مش رقم في طابور.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <h3>أدوية أصلية 100%</h3>
+        <p>كل الأدوية موردة من مصادر موثقة ومعتمدة.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>سرعة واحترافية</h3>
+        <p>صرف سريع ودقيق مع مراجعة كل وصفة طبية بعناية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
